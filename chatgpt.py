@@ -42,7 +42,7 @@ chain = ConversationalRetrievalChain.from_llm(
 chat_history = []
 while True:
   if not query:
-    query = input("Prompt: ")
+    query = input("Ask me something: ")
   if query in ['quit', 'q', 'exit']:
     sys.exit()
   result = chain({"question": query, "chat_history": chat_history})
